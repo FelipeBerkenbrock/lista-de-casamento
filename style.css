@@ -1,0 +1,547 @@
+/* Configurações gerais */
+
+body {
+    margin: 0;
+    background-color: #E0C9A6;
+    color: #222;
+    font-family: "Bodoni Moda", serif;
+}
+
+
+/* Barra superior */
+
+.barra {
+    height: 65px;
+    background-color: #000000E9;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+
+
+/* Logo F&J */
+
+.logo img {
+    height: 70px;
+    width: auto;
+    display: block;
+}
+
+
+/* Carrinho */
+
+.carrinho {
+    color: white;
+    font-size: 24px;
+}
+
+.carrinho a {
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Conteúdo principal */
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 30px;
+    font-family: "Bodoni Moda", serif;
+}
+
+
+/* Título de cada categoria */
+
+.categoria {
+    margin-bottom: 70px;
+}
+
+.categoria h2 {
+    font-family: Georgia, serif;
+    font-size: 28px;
+    font-weight: normal;
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+
+/* Grade dos produtos */
+
+.produtos {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 30px;
+}
+
+
+/* Produto */
+
+.produto {
+    text-align: center;
+}
+
+
+/* Imagem */
+
+.imagem-produto {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+
+    overflow: hidden;
+    background-color: #eeeeee;
+}
+
+.imagem-produto img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/* Nome do presente */
+
+.produto h3 {
+    font-size: 16px;
+    font-weight: normal;
+    margin: 15px 0 7px;
+
+    height: 40px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+/* Preço */
+
+.preco {
+    font-size: 15px;
+    margin: 0 0 15px;
+}
+
+
+/* Controle de quantidade */
+
+.quantidade {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 12px;
+}
+
+.quantidade button {
+    width: 28px;
+    height: 28px;
+
+    border: 1px solid #ccc;
+    background-color: white;
+
+    font-size: 16px;
+
+    cursor: pointer;
+}
+
+.quantidade span {
+    min-width: 15px;
+    text-align: center;
+}
+
+
+/* Botão Presentear */
+
+.presentear {
+    width: 100%;
+
+    padding: 11px 10px;
+
+    border: none;
+
+    background-color: #111;
+    color: white;
+
+    font-size: 12px;
+    letter-spacing: 1px;
+
+    cursor: pointer;
+}
+
+.presentear:hover {
+    background-color: #333;
+}
+
+
+/* Responsividade */
+
+@media (max-width: 900px) {
+
+    .produtos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .barra {
+        padding: 0 20px;
+    }
+
+    main {
+        padding: 35px 20px;
+    }
+
+    .produtos {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+/* ============================================================
+   PÁGINA DO CARRINHO
+   ============================================================ */
+
+.pagina-carrinho {
+
+    max-width: 900px;
+
+    margin: 0 auto;
+
+    padding: 50px 30px;
+
+}
+
+
+.pagina-carrinho h1 {
+
+    font-family: "Bodoni Moda", serif;
+
+    font-size: 38px;
+
+    font-weight: normal;
+
+    text-align: center;
+
+    margin-bottom: 45px;
+
+}
+
+
+/* Item do carrinho */
+
+.item-carrinho {
+
+    display: grid;
+
+    grid-template-columns: 1fr auto auto;
+
+    align-items: center;
+
+    gap: 30px;
+
+    padding: 25px 0;
+
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+
+}
+
+
+/* Nome e preço unitário */
+
+.informacoes-item h3 {
+
+    margin: 0 0 8px;
+
+    font-size: 17px;
+
+    font-weight: normal;
+
+}
+
+
+.informacoes-item p {
+
+    margin: 0;
+
+    font-size: 14px;
+
+}
+
+
+/* + e - */
+
+.controle-carrinho {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 12px;
+
+}
+
+
+.controle-carrinho button {
+
+    width: 30px;
+
+    height: 30px;
+
+    border: 1px solid #ccc;
+
+    background-color: white;
+
+    cursor: pointer;
+
+    font-family: inherit;
+
+    font-size: 18px;
+
+}
+
+
+.controle-carrinho button:hover {
+
+    background-color: #eeeeee;
+
+}
+
+
+.controle-carrinho span {
+
+    min-width: 20px;
+
+    text-align: center;
+
+    font-size: 15px;
+
+}
+
+
+/* Subtotal */
+
+.subtotal {
+
+    min-width: 100px;
+
+    text-align: right;
+
+    font-size: 15px;
+
+}
+
+/* Total */
+
+.total-carrinho {
+
+    display: flex;
+
+    justify-content: flex-end;
+
+    align-items: center;
+
+    gap: 30px;
+
+    margin-top: 40px;
+
+    padding-top: 20px;
+
+    border-top: 2px solid rgba(0, 0, 0, 0.4);
+
+}
+
+
+.total-carrinho h2 {
+
+    font-family: "Bodoni Moda", serif;
+
+    font-weight: normal;
+
+    margin: 0;
+
+}
+
+
+.total-carrinho p {
+
+    font-size: 22px;
+
+    margin: 0;
+
+}
+
+
+/* ============================================================
+   PIX
+   ============================================================ */
+
+.pix {
+
+    text-align: center;
+
+    margin-top: 55px;
+
+    padding-top: 35px;
+
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+
+}
+
+
+.pix h2 {
+
+    font-family: "Bodoni Moda", serif;
+
+    font-size: 24px;
+
+    font-weight: normal;
+
+    margin-bottom: 25px;
+
+}
+
+
+.pix-texto {
+
+    margin-bottom: 8px;
+    font-size: 20px;
+
+}
+
+
+.chave-pix {
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    word-break: break-all;
+
+}
+
+
+.copiar-pix {
+
+    margin-top: 10px;
+
+    padding: 12px 25px;
+
+    border: none;
+
+    background-color: #111;
+
+    color: white;
+
+    font-family: inherit;
+
+    font-size: 12px;
+
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+}
+
+
+.copiar-pix:hover {
+
+    background-color: #333;
+
+}
+
+
+/* Voltar */
+
+.voltar {
+
+    display: block;
+
+    width: fit-content;
+
+    margin: 45px auto 0;
+
+    color: #222;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+}
+
+
+.voltar:hover {
+
+    text-decoration: underline;
+
+}
+
+
+/* ============================================================
+   RESPONSIVIDADE DO CARRINHO
+   ============================================================ */
+
+@media (max-width: 700px) {
+
+    .pagina-carrinho {
+
+        padding: 35px 20px;
+
+    }
+
+
+    .item-carrinho {
+
+        grid-template-columns: 1fr auto;
+
+        gap: 15px;
+
+    }
+
+
+    .subtotal {
+
+        text-align: left;
+
+    }
+
+
+    .remover-item {
+
+        text-align: left;
+
+    }
+
+
+    .total-carrinho {
+
+        justify-content: space-between;
+
+    }
+
+}
